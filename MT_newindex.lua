@@ -22,6 +22,7 @@ local test_table =
             self.a = a
             self.b = b
         end
+        
     },
     mymetatable
 )
