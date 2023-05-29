@@ -46,24 +46,33 @@ function ClassB:ctor(...)
     self.super.ctor(self, ...)
 end
 
+
+local ClassC = class("ClassC")
+
+function ClassC:ctor(a, func)
+    self.a = a or 0
+    self.b = func
+end
+
+
 -- overwrite
 function ClassB:print()
     print('Class B overwrite super print')
 end
 
 -- 声明 classC, 并且继承 ClassB
-local ClassC = class("ClassC", ClassA)
-ClassC.static = 'Static C'
+-- local ClassC = class("ClassC", ClassA)
+-- ClassC.static = 'Static C'
 
-local obja1 = ClassA.new(10, 20)
-local obja2 = ClassA.new(100, 200)
-local objb1 = ClassB.new(1, 2)
-local objc = ClassC.new(3, 4)
-obja1:print()
-obja2:print()
-objb1:print()
-objc:print()
-printf("3 + 4 = %s", objc:getSum())
+-- local obja1 = ClassA.new(10, 20)
+-- local obja2 = ClassA.new(100, 200)
+-- local objb1 = ClassB.new(1, 2)
+-- local objc = ClassC.new(3, 4)
+-- obja1:print()
+-- obja2:print()
+-- objb1:print()
+-- objc:print()
+-- printf("3 + 4 = %s", objc:getSum())
 --[[
 ClassA, a = 10, b = 20, static = Static A
 ClassA, a = 100, b = 200, static = Static A
@@ -71,3 +80,22 @@ Class B overwrite super print
 ClassC, a = 3, b = 4, static = Static C
 3 + 4 = 7
 ]]
+
+function ClassB.T()
+    
+end
+
+print("-----------------------")
+
+local ClassC1 = ClassC.new(10, ClassB.T)
+local ClassC2 = ClassC.new(10, ClassB.T)
+
+
+print(ClassC1==ClassC2)
+print(ClassC1)
+print(ClassC2)
+
+print(type(ClassC1))
+
+
+print(tostring(ClassC1))

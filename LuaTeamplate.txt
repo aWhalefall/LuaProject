@@ -1,0 +1,38 @@
+
+ClassName = class("ClassName", BaseUIForms)
+
+--构造函数
+function ClassName:ctor()
+	self.uiPath = "PanelName"
+	self.CurrentUIType = UIType.new(UiManager.UIFormType.Normal, UiManager.UIFormShowMode.Normal)
+end
+
+--用于子类实现一些特殊逻辑
+function ClassName:OnCreate(Obj)
+	
+end
+
+--用于子类实现一些特殊逻辑
+function ClassName:OnDisplay()
+	
+end
+
+--用于子类实现一些特殊逻辑
+function ClassName:OnHiding()
+	
+end
+
+--用于子类实现一些特殊逻辑
+function ClassName:OnRedisplay()
+	
+end
+
+--用于子类实现一些特殊逻辑
+function ClassName:OnFreeze()
+	
+end
+
+--用于子类实现一些特殊逻辑
+function ClassName:OnAnimEnd()
+	
+end

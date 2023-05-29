@@ -1,0 +1,46 @@
+{
+    "sourceFile": "LuaTeamplate.lua",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1685338370705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1685338387943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \r\n-HomeHouseUiForm = class(\"HomeHouseUcreate_prefab_foldeiForm\", BaseUIForms)\r\n+ClassName = class(\"HomeHouseUcreate_prefab_foldeiForm\", BaseUIForms)\r\n \r\n --构造函数\r\n-function HomeHouseUiForm:ctor()\r\n+function ClassName:ctor()\r\n \tself.uiPath = \"HomeHousePanel\"\r\n \tself.CurrentUIType = UIType.new(UiManager.UIFormType.Normal, UiManager.UIFormShowMode.Normal)\r\n end\r\n \r\n"
+                },
+                {
+                    "date": 1685338402752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,42 +1,42 @@\n \r\n-ClassName = class(\"HomeHouseUcreate_prefab_foldeiForm\", BaseUIForms)\r\n+ClassName = class(\"HomeHouseUcreate_prefab_foldeiForm\", ClassName)\r\n \r\n --构造函数\r\n function ClassName:ctor()\r\n \tself.uiPath = \"HomeHousePanel\"\r\n \tself.CurrentUIType = UIType.new(UiManager.UIFormType.Normal, UiManager.UIFormShowMode.Normal)\r\n end\r\n \r\n-function BaseUIForms:OnCreate(Obj)\r\n+function ClassName:OnCreate(Obj)\r\n \t\r\n end\r\n \r\n --用于子类实现一些特殊逻辑\r\n-function BaseUIForms:OnCreate(Obj)\r\n+function ClassName:OnCreate(Obj)\r\n \t\r\n end\r\n \r\n --用于子类实现一些特殊逻辑\r\n-function BaseUIForms:OnDisplay()\r\n+function ClassName:OnDisplay()\r\n \t\r\n end\r\n \r\n --用于子类实现一些特殊逻辑\r\n-function BaseUIForms:OnHiding()\r\n+function ClassName:OnHiding()\r\n \t\r\n end\r\n \r\n --用于子类实现一些特殊逻辑\r\n-function BaseUIForms:OnRedisplay()\r\n+function ClassName:OnRedisplay()\r\n \t\r\n end\r\n \r\n --用于子类实现一些特殊逻辑\r\n-function BaseUIForms:OnFreeze()\r\n+function ClassName:OnFreeze()\r\n \t\r\n end\r\n \r\n --用于子类实现一些特殊逻辑\r\n-function BaseUIForms:OnAnimEnd()\r\n+function ClassName:OnAnimEnd()\r\n \t\r\n end\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685338424166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n ClassName = class(\"HomeHouseUcreate_prefab_foldeiForm\", ClassName)\r\n \r\n --构造函数\r\n function ClassName:ctor()\r\n-\tself.uiPath = \"HomeHousePanel\"\r\n+\tself.uiPath = \"Panel\"\r\n \tself.CurrentUIType = UIType.new(UiManager.UIFormType.Normal, UiManager.UIFormShowMode.Normal)\r\n end\r\n \r\n function ClassName:OnCreate(Obj)\r\n"
+                },
+                {
+                    "date": 1685338429483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n ClassName = class(\"HomeHouseUcreate_prefab_foldeiForm\", ClassName)\r\n \r\n --构造函数\r\n function ClassName:ctor()\r\n-\tself.uiPath = \"Panel\"\r\n+\tself.uiPath = \"PanelName\"\r\n \tself.CurrentUIType = UIType.new(UiManager.UIFormType.Normal, UiManager.UIFormShowMode.Normal)\r\n end\r\n \r\n function ClassName:OnCreate(Obj)\r\n"
+                },
+                {
+                    "date": 1685338443431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \r\n-ClassName = class(\"HomeHouseUcreate_prefab_foldeiForm\", ClassName)\r\n+ClassName = class(\"\", ClassName)\r\n \r\n --构造函数\r\n function ClassName:ctor()\r\n \tself.uiPath = \"PanelName\"\r\n"
+                },
+                {
+                    "date": 1685338450451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \r\n-ClassName = class(\"\", ClassName)\r\n+ClassName = class(\"\", BaseUIForms)\r\n \r\n --构造函数\r\n function ClassName:ctor()\r\n \tself.uiPath = \"PanelName\"\r\n"
+                },
+                {
+                    "date": 1685338456724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \r\n-ClassName = class(\"\", BaseUIForms)\r\n+ClassName = class(\"ClassName\", BaseUIForms)\r\n \r\n --构造函数\r\n function ClassName:ctor()\r\n \tself.uiPath = \"PanelName\"\r\n"
+                }
+            ],
+            "date": 1685338370705,
+            "name": "Commit-0",
+            "content": "\r\nHomeHouseUiForm = class(\"HomeHouseUcreate_prefab_foldeiForm\", BaseUIForms)\r\n\r\n--构造函数\r\nfunction HomeHouseUiForm:ctor()\r\n\tself.uiPath = \"HomeHousePanel\"\r\n\tself.CurrentUIType = UIType.new(UiManager.UIFormType.Normal, UiManager.UIFormShowMode.Normal)\r\nend\r\n\r\nfunction BaseUIForms:OnCreate(Obj)\r\n\t\r\nend\r\n\r\n--用于子类实现一些特殊逻辑\r\nfunction BaseUIForms:OnCreate(Obj)\r\n\t\r\nend\r\n\r\n--用于子类实现一些特殊逻辑\r\nfunction BaseUIForms:OnDisplay()\r\n\t\r\nend\r\n\r\n--用于子类实现一些特殊逻辑\r\nfunction BaseUIForms:OnHiding()\r\n\t\r\nend\r\n\r\n--用于子类实现一些特殊逻辑\r\nfunction BaseUIForms:OnRedisplay()\r\n\t\r\nend\r\n\r\n--用于子类实现一些特殊逻辑\r\nfunction BaseUIForms:OnFreeze()\r\n\t\r\nend\r\n\r\n--用于子类实现一些特殊逻辑\r\nfunction BaseUIForms:OnAnimEnd()\r\n\t\r\nend"
+        }
+    ]
+}

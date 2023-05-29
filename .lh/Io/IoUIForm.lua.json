@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Io/IoUIForm.lua",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1685330334805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1685340762516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,42 @@\n+\r\n+LuaTeamplate = class(\"LuaTeamplate\", BaseUIForms)\r\n+\r\n+--构造函数\r\n+function LuaTeamplate:ctor()\r\n+\tself.uiPath = \"PanelName\"\r\n+\tself.CurrentUIType = UIType.new(UiManager.UIFormType.Normal, UiManager.UIFormShowMode.Normal)\r\n+end\r\n+\r\n+function LuaTeamplate:OnCreate(Obj)\r\n+\t\r\n+end\r\n+\r\n+--用于子类实现一些特殊逻辑\r\n+function LuaTeamplate:OnCreate(Obj)\r\n+\t\r\n+end\r\n+\r\n+--用于子类实现一些特殊逻辑\r\n+function LuaTeamplate:OnDisplay()\r\n+\t\r\n+end\r\n+\r\n+--用于子类实现一些特殊逻辑\r\n+function LuaTeamplate:OnHiding()\r\n+\t\r\n+end\r\n+\r\n+--用于子类实现一些特殊逻辑\r\n+function LuaTeamplate:OnRedisplay()\r\n+\t\r\n+end\r\n+\r\n+--用于子类实现一些特殊逻辑\r\n+function LuaTeamplate:OnFreeze()\r\n+\t\r\n+end\r\n+\r\n+--用于子类实现一些特殊逻辑\r\n+function LuaTeamplate:OnAnimEnd()\r\n+\t\r\n+end\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1685330334805,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}

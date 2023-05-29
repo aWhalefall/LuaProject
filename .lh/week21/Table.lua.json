@@ -1,0 +1,102 @@
+{
+    "sourceFile": "week21/Table.lua",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 21,
+            "patches": [
+                {
+                    "date": 1684735506240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1684735515808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,2 @@\n+local tb1={}\r\n+tb1\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1684735524792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n local tb1={}\r\n-tb1\n\\ No newline at end of file\n+tb1[]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1684735533993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,1 @@\n local tb1={}\r\n-tb1[]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1684735542867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n local tb1={}\r\n+\r\n+tb1[eventType]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1684735551832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,5 @@\n local tb1={}\r\n \r\n-tb1[eventType]\n\\ No newline at end of file\n+tb1[eventType]=function ()\r\n+    \r\n+end\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1684735557794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n local tb1={}\r\n \r\n-tb1[eventType]=function ()\r\n+tb1[\"\"]=function ()\r\n     \r\n end\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1684735566511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n local tb1={}\r\n \r\n-tb1[\"\"]=function ()\r\n+tb1[\"tostring\"]=function ()\r\n     \r\n end\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1684735571773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,8 @@\n local tb1={}\r\n \r\n tb1[\"tostring\"]=function ()\r\n     \r\n+end\r\n+tb1[\"tostring\"]=function ()\r\n+    \r\n end\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1684735578968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,7 @@\n     \r\n end\r\n tb1[\"tostring\"]=function ()\r\n     \r\n-end\n\\ No newline at end of file\n+end\r\n+\r\n+print()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1684735599086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n local tb1={}\r\n \r\n-tb1[\"tostring\"]=function ()\r\n+tb1[\"tostring\"]=function test()\r\n     \r\n end\r\n tb1[\"tostring\"]=function ()\r\n     \r\n end\r\n \r\n\\ No newline at end of file\n-print()\n+print(#tb1)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1684735605589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n local tb1={}\r\n \r\n-tb1[\"tostring\"]=function test()\r\n+tb1[\"tostring\"]=function test_table()\r\n     \r\n end\r\n-tb1[\"tostring\"]=function ()\r\n+tb1[\"tostring\"]=function test_table()\r\n     \r\n end\r\n \r\n print(#tb1)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1684735628366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n tb1[\"tostring\"]=function test_table()\r\n     \r\n end\r\n-tb1[\"tostring\"]=function test_table()\r\n+tb1[\"tostring\"]=function Test()\r\n     \r\n end\r\n \r\n print(#tb1)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1684735633598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n local tb1={}\r\n \r\n-tb1[\"tostring\"]=function test_table()\r\n+tb1[\"tostring\"]=function Test2()\r\n     \r\n end\r\n tb1[\"tostring\"]=function Test()\r\n     \r\n"
+                },
+                {
+                    "date": 1684735669675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n tb1[\"tostring\"]=function Test2()\r\n     \r\n end\r\n-tb1[\"tostring\"]=function Test()\r\n+=function Test()\r\n     \r\n end\r\n \r\n print(#tb1)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1684735682041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,5 @@\n local tb1={}\r\n \r\n-tb1[\"tostring\"]=function Test2()\r\n-    \r\n-end\r\n-=function Test()\r\n-    \r\n-end\r\n+tb1[\"tostring\"]=\r\n \r\n print(#tb1)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1684735692008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,10 @@\n local tb1={}\r\n \r\n-tb1[\"tostring\"]=\r\n+tb1[\"tostring\"]=function ()\r\n+    \r\n+end\r\n+tb1[\"tostring\"]=function ()\r\n+    \r\n+end\r\n \r\n print(#tb1)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1684735736927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-local tb1={}\r\n+local tb1={ }\r\n \r\n tb1[\"tostring\"]=function ()\r\n     \r\n end\r\n"
+                },
+                {
+                    "date": 1684735844521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n-local tb1={ }\r\n++·local tb1={ }\r\n \r\n tb1[\"tostring\"]=function ()\r\n     \r\n end\r\n tb1[\"tostring\"]=function ()\r\n     \r\n end\r\n \r\n\\ No newline at end of file\n-print(#tb1)\n+print(#tb1)-.\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1684735860037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n-+·local tb1={ }\r\n+local tb1={ }\r\n \r\n tb1[\"tostring\"]=function ()\r\n     \r\n end\r\n tb1[\"tostring\"]=function ()\r\n     \r\n end\r\n \r\n\\ No newline at end of file\n-print(#tb1)-.\n+print(#tb1)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1684735937903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n-local tb1={ }\r\n+EventManager = {}\r\n+local this = EventManager\r\n \r\n-tb1[\"tostring\"]=function ()\r\n-    \r\n+function EventManager.init()\r\n+    this.eventHandle = {}\r\n end\r\n-tb1[\"tostring\"]=function ()\r\n\\ No newline at end of file\n-    \r\n-end\r\n \r\n-print(#tb1)\n+function EventManager.clear()\r\n+    this.eventHandle = {}\r\n+end\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1684735965504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+require \"Generate/GenerateCallEventType\"\r\n+\r\n EventManager = {}\r\n local this = EventManager\r\n \r\n function EventManager.init()\r\n@@ -6,5 +8,44 @@\n end\r\n \r\n function EventManager.clear()\r\n     this.eventHandle = {}\r\n-end\n\\ No newline at end of file\n+end\r\n+---------------------------------------------------------------\r\n+\r\n+function EventManager.CallEvents(eventType, ...)\r\n+    if this.eventHandle == nil or eventType == nil then\r\n+        return\r\n+    end\r\n+    local eventHandleInfo = this.eventHandle[eventType]\r\n+    if (eventHandleInfo ~= nil) then\r\n+        for k, v in pairs(eventHandleInfo) do\r\n+            if v ~= nil then\r\n+                v.handle(...)\r\n+            end\r\n+        end\r\n+    end\r\n+end\r\n+\r\n+function EventManager.AddEventHandle(eventType, handle)\r\n+\tlocal eventHandleInfo = {};\r\n+    eventHandleInfo.handle = handle\r\n+    local eventHandleMapInfo = this.eventHandle[eventType]\r\n+    if (eventHandleMapInfo == nil) then\r\n+        eventHandleMapInfo = {}\r\n+        this.eventHandle[eventType] = eventHandleMapInfo\r\n+    end\r\n+    table.insert(eventHandleMapInfo, eventHandleInfo)\r\n+end\r\n+\r\n+function EventManager.RemoveEvent(eventType, handle)\r\n+    local eventHandleInfo = this.eventHandle[eventType];\r\n+    if (eventHandleInfo ~= nil) then\r\n+        for k, v in pairs(eventHandleInfo) do\r\n+            if v.handle == handle then\r\n+                eventHandleInfo[k] = nil\r\n+                return\r\n+            end\r\n+        end\r\n+    end\r\n+end\r\n+\r\n"
+                }
+            ],
+            "date": 1684735506240,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}

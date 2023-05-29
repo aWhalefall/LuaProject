@@ -1,0 +1,50 @@
+{
+    "sourceFile": "week21/EventManager.lua",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1684736023225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1684736341533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n \r\n-\r\n EventManager = {}\r\n local this = EventManager\r\n \r\n function EventManager.init()\r\n"
+                },
+                {
+                    "date": 1684737321077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,4 +47,24 @@\n         end\r\n     end\r\n end\r\n \r\n+\r\n+\r\n+TestEventManager={}\r\n+\r\n+function TestEventManager.fun1()\r\n+    print(\"fun1\")\r\n+end\r\n+\r\n+function TestEventManager.fun2()\r\n+    print(\"fun2\")\r\n+end\r\n+\r\n+print(package.path)\r\n+\r\n+EventManager.AddEventHandle(1000,TestEventManager.fun1)\r\n+EventManager.AddEventHandle(1000,TestEventManager.fun2)\r\n+\r\n+for key, value in pairs(EventManager.eventHandle) do\r\n+   print(key..\" : \"..value) \r\n+end\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1684737373563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,8 @@\n     end\r\n end\r\n \r\n \r\n-\r\n TestEventManager={}\r\n \r\n function TestEventManager.fun1()\r\n     print(\"fun1\")\r\n"
+                },
+                {
+                    "date": 1684737448392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n         end\r\n     end\r\n end\r\n \r\n-\r\n+EventManager.init()\r\n TestEventManager={}\r\n \r\n function TestEventManager.fun1()\r\n     print(\"fun1\")\r\n"
+                },
+                {
+                    "date": 1684737455023,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,11 @@\n         end\r\n     end\r\n end\r\n \r\n+--初始化\r\n EventManager.init()\r\n+\r\n TestEventManager={}\r\n \r\n function TestEventManager.fun1()\r\n     print(\"fun1\")\r\n"
+                },
+                {
+                    "date": 1684737506131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,6 +66,6 @@\n EventManager.AddEventHandle(1000,TestEventManager.fun1)\r\n EventManager.AddEventHandle(1000,TestEventManager.fun2)\r\n \r\n for key, value in pairs(EventManager.eventHandle) do\r\n-   print(key..\" : \"..value) \r\n+   print(key.. \"..value) \r\n end\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1684737521314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,6 +66,6 @@\n EventManager.AddEventHandle(1000,TestEventManager.fun1)\r\n EventManager.AddEventHandle(1000,TestEventManager.fun2)\r\n \r\n for key, value in pairs(EventManager.eventHandle) do\r\n-   print(key.. \"..value) \r\n+   print(key..tost) \r\n end\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1684737528036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,6 +66,6 @@\n EventManager.AddEventHandle(1000,TestEventManager.fun1)\r\n EventManager.AddEventHandle(1000,TestEventManager.fun2)\r\n \r\n for key, value in pairs(EventManager.eventHandle) do\r\n-   print(key..tost) \r\n+   print(key..type) \r\n end\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1684736023225,
+            "name": "Commit-0",
+            "content": "\r\n\r\nEventManager = {}\r\nlocal this = EventManager\r\n\r\nfunction EventManager.init()\r\n    this.eventHandle = {}\r\nend\r\n\r\nfunction EventManager.clear()\r\n    this.eventHandle = {}\r\nend\r\n---------------------------------------------------------------\r\n\r\nfunction EventManager.CallEvents(eventType, ...)\r\n    if this.eventHandle == nil or eventType == nil then\r\n        return\r\n    end\r\n    local eventHandleInfo = this.eventHandle[eventType]\r\n    if (eventHandleInfo ~= nil) then\r\n        for k, v in pairs(eventHandleInfo) do\r\n            if v ~= nil then\r\n                v.handle(...)\r\n            end\r\n        end\r\n    end\r\nend\r\n\r\nfunction EventManager.AddEventHandle(eventType, handle)\r\n\tlocal eventHandleInfo = {};\r\n    eventHandleInfo.handle = handle\r\n    local eventHandleMapInfo = this.eventHandle[eventType]\r\n    if (eventHandleMapInfo == nil) then\r\n        eventHandleMapInfo = {}\r\n        this.eventHandle[eventType] = eventHandleMapInfo\r\n    end\r\n    table.insert(eventHandleMapInfo, eventHandleInfo)\r\nend\r\n\r\nfunction EventManager.RemoveEvent(eventType, handle)\r\n    local eventHandleInfo = this.eventHandle[eventType];\r\n    if (eventHandleInfo ~= nil) then\r\n        for k, v in pairs(eventHandleInfo) do\r\n            if v.handle == handle then\r\n                eventHandleInfo[k] = nil\r\n                return\r\n            end\r\n        end\r\n    end\r\nend\r\n\r\n"
+        }
+    ]
+}
